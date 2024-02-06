@@ -11,7 +11,9 @@ import Login from "./components/Login";
 import Home from "./components/Home";
 import Register from "./components/Register";
 import authService from "./services/authService";
-
+import FormIndustrial from "./components/FormIndustrial";
+import FormMecanica from "./components/FormMecanica";
+import FormBioquimica from "./components/FormBioquimica";
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
@@ -32,8 +34,10 @@ const App = () => {
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/Register" component={Register} />
-          <PrivateRoute path="/home" component={Home} />
-          priv
+          <PrivateRoute path="/home" exact component={Home} />
+          <PrivateRoute path="/Industrial" component={FormIndustrial} />
+          <PrivateRoute path="/Mecanica" component={FormMecanica} />
+          <PrivateRoute path="/Bioquimica" component={FormBioquimica} />
         </Switch>
       </div>
     </Router>

@@ -1,12 +1,18 @@
-// src/components/Navegation.js
 import React from "react";
+import logo from "../Img/logo_ITT-1242765813.png";
+
 const NavegationApp = () => {
   return (
     <nav
-      className="navbar bg-dark navbar-expand-lg bg-body-tertiary"
-      data-bs-theme="dark"
+      className="navbar navbar-expand-lg"
+      style={{ backgroundColor: "#6eb274" }}
     >
       <div className="container-fluid">
+        <img
+          src={logo}
+          alt="Logo"
+          style={{ width: "50px", marginRight: "10px" }}
+        />
         <a className="navbar-brand" href="/home">
           Tecnologico
         </a>
@@ -19,7 +25,7 @@ const NavegationApp = () => {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/login">
-                Login
+                Iniciar sesión
               </a>
             </li>
           </ul>
